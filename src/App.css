@@ -1,0 +1,229 @@
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+.navbar-logo-container {
+    width: 20vw;
+    position: relative;
+}
+
+.navbar-link-container {
+    width: 60vw;
+    display: flex;
+    margin-left: 20vw;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    border: none;
+    background-color: unset;
+    color: #1b3044;
+    font-family: "Comfortaa", cursive;
+    transition: all 0.1s ease-in-out;
+    padding: 10px;
+    border-radius: 20px;
+    /* box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, 0.3); */
+}
+button:active {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-logo {
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.navbar-app-name {
+    font-size: 35px;
+    font-family: "Comfortaa bold", cursive;
+    color: #1b3044;
+    margin-top: 35px;
+}
+.navbar-logo-container:after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 569px;
+    top: -260px;
+    left: -20px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    transform: rotate(250deg);
+    background-size: 346px 500px;
+    background-image: url("./Assets/images/bitmap.png");
+}
+.navbar-logo-container {
+    display: flex;
+}
+
+.navbar-link-container button {
+    font-size: 20px;
+    width: 150px;
+    padding: 10px;
+}
+
+.blob-top {
+    max-width: 185px;
+    height: auto;
+    position: fixed;
+    top: -110px;
+    left: -20px;
+    transform: rotate(250deg);
+}
+
+.button-blue {
+    background-color: #1b3044;
+    border-radius: 20px;
+    color: white;
+}
+
+.home-intro-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 100px;
+    width: 100vw;
+    left: 0px;
+}
+
+.home-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #1b3044;
+    width: 55vw;
+    left: 0px;
+}
+
+.home-phone-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    position: relative;
+    animation: enterFade 1s ease;
+}
+
+@keyframes enterFade {
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.home-phone {
+    position: relative;
+    overflow: hidden;
+    width: 360px;
+    background-color: white;
+    height: 700px;
+    border: 10px solid #1b3044;
+    border-radius: 35px;
+    box-shadow: 18px 0px 30px -3px rgba(0, 0, 0, 0.3);
+}
+
+.home-phone img {
+    width: 360px;
+    height: 700px;
+    border-radius: 25px;
+}
+
+.fade-animation {
+    /* transition: all 0.5s ease; */
+    position: absolute;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+}
+
+.home-phone-container::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url("./Assets/images/ellipse.png");
+    width: 600px;
+    bottom: -160px;
+    left: -75px;
+    z-index: -1;
+    height: 200px;
+}
+
+.home-phone::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #1b3044;
+}
+
+.home-text-container h1 {
+    font-size: 40px;
+    margin: 5vw;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+
+.home-text-container button {
+    font-size: 20px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.home-text-container ul {
+    text-align: left;
+    margin-top: 50px;
+    font-size: 22px;
+}
+
+.home-text-container li {
+    background: url("Assets/images/checked.png") no-repeat 7px 7px;
+    list-style-type: none;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0px 0px 20px 54px;
+    vertical-align: middle;
+    background-position: 0px -4px;
+}
+
+.home-text-container li::marker {
+    margin-top: 20px;
+}
+
+.video-container {
+    width: 100vw;
+    height: 800px;
+    background-image: url("./Assets/images/background.svg");
+    background-size: 100% 100vw;
+}
