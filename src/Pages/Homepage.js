@@ -1,63 +1,33 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
-import homeImage from "../Assets/images/home.jpg";
-import historyImage from "../Assets/images/history.jpg";
-import Fade from "../Components/Fade/Fade";
+import Phone from "../Components/Phone/Phone";
 
 class Homepage extends React.Component {
-    state = {
-        phoneToRender: 2,
-    };
-
-    componentDidMount = () => {
-        this.switchImage();
-    };
-
-    switchImage = () => {
-        let nb = this.state.phoneToRender;
-        nb = nb + 1;
-        if (nb >= 2) nb = 0;
-        this.setState({ phoneToRender: nb });
-        // if (nb % 2 !== 0) setTimeout(this.switchImage, 400);
-        // else
-        setTimeout(this.switchImage, 10000);
-    };
-
-    displayPhone = () => {
-        return (
-            <React.Fragment>
-                <Fade show={this.state.phoneToRender === 0}>
-                    <img src={homeImage} key={0} alt="home" />
-                </Fade>
-
-                <Fade show={this.state.phoneToRender === 1}>
-                    <img src={historyImage} key={1} alt="history" />
-                </Fade>
-            </React.Fragment>
-        );
-    };
-
     render = () => {
         return (
             <div className="homepage-container">
                 <Navbar />
-                <div className="home-intro-container">
-                    <div className="home-text-container">
-                        <h1>
-                            La traçabilité des produits <br /> <bold>du champ à ton assiette</bold>
-                        </h1>
-                        <button className="button-blue">En savoir plus</button>
-                        <ul>
-                            <li>Des milliers de produits</li>
-                            <li>Mesure ton impact carbone</li>
-                            <li>Découvre le trajet des aliments</li>
-                        </ul>
-                    </div>
-                    <div className="home-phone-container">
-                        <div className="home-phone">{this.displayPhone()}</div>
+                <Phone />
+                <div className="video-container">
+                    <h2>Découvre l'impact environnemental des produits</h2>
+                    <div className="video-frame-container">
+                        <div className="video-wrapper">
+                            <div className="video"></div>
+                        </div>
+                        <div className="text-video-wrapper">
+                            <h3>Analyse ton impact carbone</h3>
+                            <p>
+                                Vous êtes producteur ? Contactez-nous pour partager vos
+                                informations, et mettre vos produits locaux en valeur
+                            </p>
+                            <h3>Des milliers de produits à scanner</h3>
+                            <p>
+                                Vous êtes producteur ? Contactez-nous pour partager vos
+                                informations, et mettre vos produits locaux en valeur
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div className="video-container"></div>
             </div>
         );
     };

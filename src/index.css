@@ -6,6 +6,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -43,4 +48,8 @@ h1 {
 
 bold {
     font-weight: bolder;
+}
+
+.hidden {
+    display: none;
 }
