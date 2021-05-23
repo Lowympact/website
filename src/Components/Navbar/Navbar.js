@@ -34,7 +34,7 @@ class Navbar extends React.Component {
                 <div className="navbar-link-container">
                     <button onClick={this.props.scrollTo}>Le projet</button>
                     <button onClick={this.props.scrollTo}>L'équipe</button>
-                    <a className="button button-blue" href="https://lowympact.fr">
+                    <a className="button button-blue" href="https://lowympact.fr?from=website">
                         Installer
                     </a>
                 </div>
@@ -70,7 +70,7 @@ class Navbar extends React.Component {
                     <div className="sliding-menu-items">
                         <button>Le projet</button>
                         <button>L'équipe</button>
-                        <a className="button button-blue" href="https://lowympact.fr">
+                        <a className="button button-blue" href="https://lowympact.fr?from=website">
                             Installer
                         </a>
                     </div>
