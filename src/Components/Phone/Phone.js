@@ -43,7 +43,9 @@ class Phone extends React.Component {
                     <h1>
                         La traçabilité des produits <br /> <bold>du champ à ton assiette</bold>
                     </h1>
-                    <button className="button-blue">En savoir plus</button>
+                    <button className="button-blue" onClick={this.props.scrollTo}>
+                        En savoir plus
+                    </button>
                     <ul>
                         <li>Des milliers de produits</li>
                         <li>Mesure ton impact carbone</li>
