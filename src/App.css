@@ -629,3 +629,41 @@ button:hover {
         margin-top: 40px;
     }
 }
+
+.team-container {
+    text-align: center;
+}
+
+.team-container h2 {
+    font-size: 40px;
+}
+
+.members-container {
+    width: 65%;
+    display: flex;
+    margin: 30px auto 0px auto;
+    flex-wrap: wrap;
+}
+
+.member {
+    flex: 33%;
+}
+
+.member img {
+    width: 55%;
+    min-width: 120px;
+}
+
+@media (max-width: 750px) {
+    .team-container h2 {
+        margin-top: 70px;
+    }
+    .member {
+        flex: 50%;
+        font-size: 12px;
+    }
+
+    .member img {
+        min-width: 100px;
+    }
+}

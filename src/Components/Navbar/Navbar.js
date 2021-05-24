@@ -1,5 +1,6 @@
 import React from "react";
 import "./Ham-menu.css";
+import History from "../History/History";
 
 class Navbar extends React.Component {
     state = {
@@ -24,6 +25,11 @@ class Navbar extends React.Component {
         this.setState({ displayMenu: !this.state.displayMenu });
     };
 
+    handleTeam = () => {
+        History.push("/equipe");
+        History.go();
+    };
+
     displayFullMenu = () => {
         return (
             <div className="navbar-container">
@@ -33,7 +39,7 @@ class Navbar extends React.Component {
                 </div>
                 <div className="navbar-link-container">
                     <button onClick={this.props.scrollTo}>Le projet</button>
-                    <button onClick={this.props.scrollTo}>L'équipe</button>
+                    <button onClick={this.handleTeam}>L'équipe</button>
                     <a className="button button-blue" href="https://lowympact.fr?from=website">
                         Installer
                     </a>
